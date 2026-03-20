@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shalini Portfolio</title>
+
 <style>
 body {
   font-family: 'Segoe UI', sans-serif;
@@ -14,11 +21,6 @@ header {
   text-align: center;
 }
 
-header h1 {
-  font-size: 32px;
-  margin: 0;
-}
-
 header p {
   margin-top: 10px;
   font-size: 18px;
@@ -30,6 +32,7 @@ section {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
+  border-bottom: 1px solid #1e293b;
 }
 
 h2 {
@@ -86,10 +89,9 @@ h2 {
   padding: 6px 10px;
   margin: 5px;
   border-radius: 5px;
-  font-size: 14px;
 }
 
-/* CONTACT LINKS */
+/* LINKS */
 a {
   color: #38bdf8;
   text-decoration: none;
@@ -117,3 +119,84 @@ footer {
   to {opacity: 1;}
 }
 </style>
+
+</head>
+
+<body>
+
+<header class="fade">
+  <h1 id="typing"></h1>
+  <p>Data Analyst | Power BI | Excel | SQL</p>
+  <a href="resume.pdf" class="btn" download>Download Resume</a>
+</header>
+
+<section class="fade">
+  <h2>About Me</h2>
+  <p>I am a passionate data analyst skilled in Excel and Power BI. I enjoy creating dashboards that transform raw data into meaningful insights for better decision-making.</p>
+</section>
+
+<section class="fade">
+  <h2>Projects</h2>
+
+  <div class="projects">
+
+    <div class="project">
+      <img src="customer-dashboard.png">
+      <h3>Customer Behavior Dashboard</h3>
+      <p>Analyzed customer trends and found that non-subscribers dominate the customer base.</p>
+      <a href="YOUR_GITHUB_LINK_1" class="btn" target="_blank">🔗 View Project</a>
+    </div>
+
+    <div class="project">
+      <img src="blinkit-dashboard.png">
+      <h3>Blinkit Sales Dashboard</h3>
+      <p>Excel dashboard analyzing outlet performance and identifying Tier 3 as top revenue contributor.</p>
+      <a href="YOUR_GITHUB_LINK_2" class="btn" target="_blank">🔗 View Project</a>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="fade">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Power BI</span>
+    <span>Excel</span>
+    <span>SQL</span>
+    <span>Python</span>
+    <span>Data Visualization</span>
+  </div>
+</section>
+
+<section class="fade">
+  <h2>Contact</h2>
+  <p>Email: shalinigowda004@gmail.com</p>
+  <p>
+    <a href="https://github.com/Shalinigowd" target="_blank">GitHub</a> |
+    <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 Shalini Portfolio</p>
+</footer>
+
+<!-- TYPING SCRIPT -->
+<script>
+const text = "Hi, I'm Shalini 👋";
+let i = 0;
+
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 100);
+  }
+}
+
+typeEffect();
+</script>
+
+</body>
+</html>
