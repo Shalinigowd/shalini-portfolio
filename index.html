@@ -4,27 +4,78 @@
   <title>Shalini Portfolio</title>
   <style>
     body {
-      font-family: Arial;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f4f4f4;
+      background: #f5f7fa;
     }
+
     header {
-      background: #333;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
       color: white;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
     }
-    section {
-      padding: 20px;
+
+    h1 {
+      margin: 0;
     }
+
+    section {
+      padding: 30px;
+    }
+
+    h2 {
+      border-left: 5px solid #4facfe;
+      padding-left: 10px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
     .project {
       background: white;
+      border-radius: 10px;
       padding: 15px;
-      margin: 10px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project img {
+      width: 100%;
       border-radius: 8px;
     }
-    a {
-      color: blue;
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #4facfe;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #4facfe;
+      color: white;
+      padding: 6px 10px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #333;
+      color: white;
     }
   </style>
 </head>
@@ -33,38 +84,57 @@
 
 <header>
   <h1>Hi, I'm Shalini 👋</h1>
-  <p>Data Analyst | Power BI | Excel</p>
+  <p>Data Analyst | Power BI | Excel | SQL</p>
 </header>
 
 <section>
   <h2>About Me</h2>
-  <p>I am a passionate Data Analyst with experience in building dashboards using Excel and Power BI. I enjoy converting data into meaningful insights.</p>
+  <p>I am a data analyst passionate about transforming raw data into meaningful insights using Excel and Power BI. I enjoy building dashboards that help in better decision-making.</p>
 </section>
 
 <section>
   <h2>Projects</h2>
 
-  <div class="project">
-    <h3>Customer Behavior Dashboard</h3>
-    <p>Analyzed customer purchase behavior using Power BI.</p>
-  </div>
+  <div class="projects">
 
-  <div class="project">
-    <h3>Blinkit Sales Dashboard</h3>
-    <p>Created Excel dashboard to analyze sales and outlet performance.</p>
+    <div class="project">
+      <img src="customer-dashboard.png" alt="Customer Dashboard">
+      <h3>Customer Behavior Dashboard</h3>
+      <p>Analyzed customer purchase trends, subscription behavior, and category-wise sales.</p>
+      <a href="YOUR_GITHUB_LINK_1" class="btn">View Project</a>
+    </div>
+
+    <div class="project">
+      <img src="blinkit-dashboard.png" alt="Blinkit Dashboard">
+      <h3>Blinkit Sales Dashboard</h3>
+      <p>Built Excel dashboard to analyze outlet performance, sales trends, and product categories.</p>
+      <a href="YOUR_GITHUB_LINK_2" class="btn">View Project</a>
+    </div>
+
   </div>
 
 </section>
 
 <section>
   <h2>Skills</h2>
-  <p>Power BI, Excel, SQL, Python</p>
+  <div class="skills">
+    <span>Power BI</span>
+    <span>Excel</span>
+    <span>SQL</span>
+    <span>Python</span>
+    <span>Data Visualization</span>
+  </div>
 </section>
 
 <section>
   <h2>Contact</h2>
   <p>Email: yourmail@gmail.com</p>
+  <p>GitHub: YOUR_GITHUB_LINK</p>
 </section>
+
+<footer>
+  <p>© 2026 Shalini Portfolio</p>
+</footer>
 
 </body>
 </html>
