@@ -11,26 +11,46 @@ body {
   margin: 0;
   background: #0f172a;
   color: #e2e8f0;
+  scroll-behavior: smooth;
 }
 
 /* HEADER */
 header {
-  background: #1e293b;
+  background: linear-gradient(135deg, #1e293b 0%, #111827 100%);
   color: #f8fafc;
-  padding: 50px 20px;
+  padding: 80px 20px;
   text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
 }
 
 header p {
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #cbd5f5;
 }
 
-/* SECTION */
+header .btn {
+  margin-top: 20px;
+  padding: 10px 18px;
+  background: #22c55e;
+  color: #022c22;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+header .btn:hover {
+  background: #16a34a;
+}
+
+/* SECTIONS */
 section {
-  padding: 40px 20px;
-  max-width: 1000px;
+  padding: 60px 20px;
+  max-width: 1100px;
   margin: auto;
   border-bottom: 1px solid #1e293b;
 }
@@ -39,46 +59,62 @@ h2 {
   border-left: 5px solid #22c55e;
   padding-left: 10px;
   color: #f1f5f9;
+  margin-bottom: 30px;
 }
 
 /* PROJECT GRID */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
 }
 
 .project {
   background: #1e293b;
   border-radius: 12px;
   padding: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
   transition: 0.3s;
+  overflow: hidden;
 }
 
 .project:hover {
   transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
 }
 
 .project img {
   width: 100%;
   border-radius: 8px;
+  transition: 0.3s;
 }
 
-/* BUTTON */
-.btn {
+.project img:hover {
+  transform: scale(1.05);
+}
+
+.project h3 {
+  margin: 12px 0 8px;
+}
+
+.project p {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+}
+
+/* TECH BADGES */
+.tech {
+  margin-top: 8px;
+}
+
+.tech span {
   display: inline-block;
-  margin-top: 10px;
-  padding: 8px 14px;
   background: #22c55e;
   color: #022c22;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
-}
-
-.btn:hover {
-  background: #16a34a;
+  padding: 5px 8px;
+  margin: 3px 3px 0 0;
+  border-radius: 5px;
+  font-size: 0.8rem;
 }
 
 /* SKILLS */
@@ -86,9 +122,16 @@ h2 {
   display: inline-block;
   background: #22c55e;
   color: #022c22;
-  padding: 6px 10px;
+  padding: 8px 12px;
   margin: 5px;
   border-radius: 5px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.skills span:hover {
+  background: #16a34a;
+  color: #f1f5f9;
 }
 
 /* LINKS */
@@ -119,43 +162,66 @@ footer {
   to {opacity: 1;}
 }
 </style>
-
 </head>
 
 <body>
 
 <header class="fade">
   <h1 id="typing"></h1>
-  <p>Data Analyst | Power BI | Excel | SQL</p>
+  <p>Data Analyst | Power BI | Excel | SQL | Python</p>
   <a href="resume.pdf" class="btn" download>Download Resume</a>
 </header>
 
 <section class="fade">
   <h2>About Me</h2>
-  <p>I am a passionate data analyst skilled in Excel and Power BI. I enjoy creating dashboards that transform raw data into meaningful insights for better decision-making.</p>
+  <p>I am a passionate data analyst skilled in Excel, Power BI, and Python. I enjoy creating dashboards that transform raw data into meaningful insights for better decision-making. My projects focus on real-world business problems and data visualization for actionable insights.</p>
 </section>
 
 <section class="fade">
   <h2>Projects</h2>
-
   <div class="projects">
 
     <div class="project">
       <img src="customer-dashboard.png">
       <h3>Customer Behavior Dashboard</h3>
-      <p>Analyzed customer trends and found that non-subscribers dominate the customer base.</p>
+      <p>Analyzed customer trends and non-subscriber dominance using Power BI dashboards.</p>
+      <div class="tech">
+        <span>Power BI</span><span>SQL</span>
+      </div>
       <a href="https://github.com/Shalinigowd/customer-behavior-dashboard" class="btn" target="_blank">🔗 View Project</a>
     </div>
 
     <div class="project">
       <img src="blinkit-dashboard.png">
       <h3>Blinkit Sales Dashboard</h3>
-      <p>Excel dashboard analyzing outlet performance and identifying Tier 3 as top revenue contributor.</p>
+      <p>Excel dashboard analyzing outlet performance and identifying top revenue contributors.</p>
+      <div class="tech">
+        <span>Excel</span><span>Data Analysis</span>
+      </div>
       <a href="https://github.com/Shalinigowd/blinkit-excel-dashboard" class="btn" target="_blank">🔗 View Project</a>
     </div>
 
-  </div>
+    <div class="project">
+      <img src="student-performance.png">
+      <h3>Student Performance Prediction</h3>
+      <p>Machine learning project predicting student performance using Python.</p>
+      <div class="tech">
+        <span>Python</span><span>ML</span>
+      </div>
+      <a href="https://github.com/Shalinigowd/Student_performance_prediction" class="btn" target="_blank">🔗 View Project</a>
+    </div>
 
+    <div class="project">
+      <img src="sms-filter.png">
+      <h3>SMS Spam Filter</h3>
+      <p>Python project implementing SMS spam detection using ML algorithms.</p>
+      <div class="tech">
+        <span>Python</span><span>ML</span>
+      </div>
+      <a href="https://github.com/Shalinigowd/sms-spam-filter" class="btn" target="_blank">🔗 View Project</a>
+    </div>
+
+  </div>
 </section>
 
 <section class="fade">
@@ -166,12 +232,13 @@ footer {
     <span>SQL</span>
     <span>Python</span>
     <span>Data Visualization</span>
+    <span>Machine Learning</span>
   </div>
 </section>
 
 <section class="fade">
   <h2>Contact</h2>
-  <p>Email: shalinigowda004@gmail.com</p>
+  <p>Email: <a href="mailto:shalinigowda004@gmail.com">shalinigowda004@gmail.com</a></p>
   <p>
     <a href="https://github.com/Shalinigowd" target="_blank">GitHub</a> |
     <a href="https://www.linkedin.com/in/shalinim08/" target="_blank">LinkedIn</a>
@@ -186,7 +253,6 @@ footer {
 <script>
 const text = "Hi, I'm Shalini 👋";
 let i = 0;
-
 function typeEffect() {
   if (i < text.length) {
     document.getElementById("typing").innerHTML += text.charAt(i);
@@ -194,7 +260,6 @@ function typeEffect() {
     setTimeout(typeEffect, 100);
   }
 }
-
 typeEffect();
 </script>
 
