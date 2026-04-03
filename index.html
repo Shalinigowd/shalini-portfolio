@@ -15,20 +15,19 @@
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: linear-gradient(135deg, #0f172a, #020617);
-  color: #e2e8f0;
+  background: linear-gradient(135deg, #0a0f1c, #050816);
+  color: #e6edf3;
   transition: 0.3s;
 }
 
 /* LIGHT MODE */
 .light-mode {
-  background: #f8fafc;
-  color: #020617;
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  color: #0f172a;
 }
 
 .light-mode .card {
-  background: #ffffff;
-  color: #020617;
+  background: rgba(255,255,255,0.8);
 }
 
 /* HEADER */
@@ -39,19 +38,18 @@ header {
 
 header h1 {
   font-size: 3rem;
-}
-
-.highlight {
-  color: #22c55e;
+  background: linear-gradient(90deg, #22c55e, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* BUTTON */
 .btn {
   display: inline-block;
   margin: 10px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  background: #22c55e;
+  padding: 10px 22px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #22c55e, #38bdf8);
   color: #022c22;
   font-weight: 600;
   text-decoration: none;
@@ -61,57 +59,64 @@ header h1 {
 }
 
 .btn:hover {
-  background: #16a34a;
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #38bdf8;
 }
 
 /* CARD */
 .card {
-  background: rgba(30, 41, 59, 0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(15px);
+  border-radius: 18px;
   padding: 20px;
   margin: 20px 0;
   transition: 0.3s;
+  border: 1px solid rgba(56,189,248,0.2);
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(56,189,248,0.3);
 }
 
 /* SECTIONS */
 section {
   max-width: 1100px;
   margin: auto;
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
 h2 {
-  border-left: 5px solid #22c55e;
-  padding-left: 10px;
+  border-left: 5px solid #38bdf8;
+  padding-left: 12px;
 }
 
 /* PROJECT GRID */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 25px;
 }
 
 .projects img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 10px;
 }
 
 /* SKILLS */
 .skills span {
   display: inline-block;
-  background: #22c55e;
+  background: linear-gradient(135deg, #22c55e, #38bdf8);
   color: #022c22;
-  padding: 8px 12px;
+  padding: 8px 14px;
   margin: 5px;
-  border-radius: 6px;
+  border-radius: 20px;
+}
+
+/* LINKS */
+a {
+  color: #38bdf8;
 }
 
 /* FOOTER */
@@ -126,7 +131,7 @@ footer {
 <body>
 
 <header data-aos="fade-down">
-  <h1>Hi, I'm <span class="highlight">Shalini 👋</span></h1>
+  <h1>Hi, I'm Shalini 👋</h1>
   <p>Data Analyst | SQL | Python | Power BI</p>
 
   <a href="shalini_resume_data-analyst.pdf" class="btn" download>Download Resume</a>
@@ -140,10 +145,6 @@ footer {
     <p>
       I am a results-driven Data Analyst skilled in SQL, Python, Excel, and Power BI.
       I specialize in transforming raw data into actionable insights that drive business decisions.
-
-      I have hands-on experience in building dashboards, analyzing customer behavior,
-      and developing machine learning models to solve real-world problems.
-
       I am actively seeking opportunities to contribute to data-driven organizations.
     </p>
   </div>
@@ -156,40 +157,24 @@ footer {
     <div class="card" data-aos="zoom-in">
       <img src="images/customer-dashboard.png">
       <h3>Customer Behavior Dashboard</h3>
-      <p>Analyzed customer trends and improved targeting strategies using Power BI.</p>
-      <p><b>Tech:</b> Power BI, SQL</p>
       <a href="https://github.com/Shalinigowd/customer-behavior-dashboard" target="_blank">View Project →</a>
     </div>
 
     <div class="card" data-aos="zoom-in">
       <img src="images/blinkit-dashboard.png">
       <h3>Blinkit Sales Dashboard</h3>
-      <p>Identified top revenue contributors and outlet performance using Excel.</p>
-      <p><b>Tech:</b> Excel</p>
       <a href="https://github.com/Shalinigowd/blinkit-excel-dashboard" target="_blank">View Project →</a>
     </div>
 
     <div class="card" data-aos="zoom-in">
       <img src="images/student-performance.png">
       <h3>Student Performance Prediction</h3>
-      <p>ML model predicting student performance using Python.</p>
-      <p><b>Tech:</b> Python, ML</p>
       <a href="https://github.com/Shalinigowd/Student_performance_prediction" target="_blank">View Project →</a>
-    </div>
-
-    <div class="card" data-aos="zoom-in">
-      <img src="images/sms-filter.png">
-      <h3>SMS Spam Filter</h3>
-      <p>Built NLP-based spam detection system using machine learning.</p>
-      <p><b>Tech:</b> Python, NLP</p>
-      <a href="https://github.com/Shalinigowd/sms-spam-filter" target="_blank">View Project →</a>
     </div>
 
     <div class="card" data-aos="zoom-in">
       <img src="images/sql-project.png">
       <h3>SQL Data Analysis Project</h3>
-      <p>Performed joins, aggregations, and business insights using SQL.</p>
-      <p><b>Tech:</b> SQL</p>
       <a href="https://github.com/Shalinigowd/sql_project" target="_blank">View Project →</a>
     </div>
 
@@ -203,16 +188,6 @@ footer {
     <span>Python</span>
     <span>Power BI</span>
     <span>Excel</span>
-    <span>Machine Learning</span>
-    <span>Data Visualization</span>
-    <span>Data Cleaning</span>
-  </div>
-</section>
-
-<section data-aos="fade-up">
-  <h2>GitHub Stats</h2>
-  <div class="card">
-    <img src="https://github-readme-stats.vercel.app/api?username=Shalinigowd&show_icons=true&theme=dark" width="100%">
   </div>
 </section>
 
@@ -220,26 +195,18 @@ footer {
   <h2>Contact</h2>
   <div class="card">
     <p>Email: shalinigowda004@gmail.com</p>
-    <p>
-      <a href="https://github.com/Shalinigowd" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/shalinim08/" target="_blank">LinkedIn</a>
-    </p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Shalini | Data Analyst Portfolio</p>
+  <p>© 2026 Shalini Portfolio</p>
 </footer>
 
 <!-- AOS SCRIPT -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-AOS.init({
-  duration: 1000,
-  once: true
-});
+AOS.init({ duration: 1000 });
 
-/* DARK MODE */
 function toggleMode() {
   document.body.classList.toggle("light-mode");
 }
