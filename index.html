@@ -3,118 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shalini Portfolio</title>
+<title>Shalini | Data Analyst</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: #0f172a;
+  background: linear-gradient(135deg, #0f172a, #020617);
   color: #e2e8f0;
-  scroll-behavior: smooth;
 }
 
 /* HEADER */
 header {
-  background: linear-gradient(135deg, #1e293b 0%, #111827 100%);
-  color: #f8fafc;
-  padding: 80px 20px;
   text-align: center;
+  padding: 100px 20px;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
-header p {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  color: #cbd5f5;
+.highlight {
+  color: #22c55e;
 }
 
-header .btn {
-  margin-top: 20px;
-  padding: 10px 18px;
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
   background: #22c55e;
   color: #022c22;
-  text-decoration: none;
-  border-radius: 8px;
   font-weight: 600;
+  text-decoration: none;
   transition: 0.3s;
 }
 
-header .btn:hover {
+.btn:hover {
   background: #16a34a;
+  transform: scale(1.05);
+}
+
+/* GLASS CARD */
+.card {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 /* SECTIONS */
 section {
-  padding: 60px 20px;
   max-width: 1100px;
   margin: auto;
-  border-bottom: 1px solid #1e293b;
+  padding: 50px 20px;
 }
 
 h2 {
   border-left: 5px solid #22c55e;
   padding-left: 10px;
-  color: #f1f5f9;
-  margin-bottom: 30px;
 }
 
 /* PROJECT GRID */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-}
-
-.project {
-  background: #1e293b;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-  transition: 0.3s;
-  overflow: hidden;
-}
-
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
-}
-
-.project img {
-  width: 100%;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.project img:hover {
-  transform: scale(1.05);
-}
-
-.project h3 {
-  margin: 12px 0 8px;
-}
-
-.project p {
-  font-size: 0.95rem;
-  color: #cbd5f5;
-}
-
-/* TECH BADGES */
-.tech {
-  margin-top: 8px;
-}
-
-.tech span {
-  display: inline-block;
-  background: #22c55e;
-  color: #022c22;
-  padding: 5px 8px;
-  margin: 3px 3px 0 0;
-  border-radius: 5px;
-  font-size: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 /* SKILLS */
@@ -124,190 +86,118 @@ h2 {
   color: #022c22;
   padding: 8px 12px;
   margin: 5px;
-  border-radius: 5px;
-  font-weight: 500;
-  transition: 0.2s;
-}
-
-.skills span:hover {
-  background: #16a34a;
-  color: #f1f5f9;
-}
-
-/* LINKS */
-a {
-  color: #38bdf8;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  border-radius: 6px;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  background: #020617;
   color: #94a3b8;
-}
-
-/* ANIMATION */
-.fade {
-  animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
 }
 </style>
 </head>
 
 <body>
 
-<header class="fade">
-  <h1 id="typing"></h1>
-  <p>Power BI | Excel | SQL | Python</p>
+<header>
+  <h1>Hi, I'm <span class="highlight">Shalini 👋</span></h1>
+  <p>Data Analyst | SQL | Python | Power BI</p>
+
   <a href="shalini_resume_data-analyst.pdf" class="btn" download>Download Resume</a>
+  <a href="mailto:shalinigowda004@gmail.com" class="btn">Hire Me</a>
 </header>
 
-<section class="fade">
+<section>
   <h2>About Me</h2>
-  <p>I am a passionate Data Analyst who loves turning raw data into actionable insights. With experience in SQL, Python, Excel, and Power BI, I specialize in analyzing data, identifying trends, and building interactive dashboards.
+  <div class="card">
+    <p>
+      I am a results-driven Data Analyst skilled in SQL, Python, Excel, and Power BI. 
+      I specialize in converting raw data into actionable insights that drive business decisions.
 
-    I have worked on real-world projects involving sales analysis, customer behavior, and inventory management, where I transformed complex datasets into clear business insights.
-
-My goal is to leverage data to solve real-world problems, improve decision-making, and create meaningful impact in organizations.</p>
+      I have worked on real-world projects like customer behavior analysis, sales dashboards, and machine learning models. 
+      My goal is to solve business problems using data and contribute to impactful decision-making.
+    </p>
+  </div>
 </section>
 
-<section class="fade">
+<section>
   <h2>Projects</h2>
   <div class="projects">
 
-    <div class="project">
-      <img src="customer-dashboard.png">
+    <div class="card">
       <h3>Customer Behavior Dashboard</h3>
-      <p>Analyzed customer trends and non-subscriber dominance using Power BI dashboards.</p>
-      <div class="tech">
-        <span>Power BI</span><span>SQL</span>
-      </div>
-      <a href="https://github.com/Shalinigowd/customer-behavior-dashboard" class="btn" target="_blank">🔗 View Project</a>
+      <p>Built Power BI dashboard to analyze customer trends and improve targeting strategies.</p>
+      <p><b>Tech:</b> Power BI, SQL</p>
+      <a href="https://github.com/Shalinigowd/customer-behavior-dashboard" target="_blank">View Project →</a>
     </div>
 
-    <div class="project">
-      <img src="blinkit-dashboard.png">
+    <div class="card">
       <h3>Blinkit Sales Dashboard</h3>
-      <p>Excel dashboard analyzing outlet performance and identifying top revenue contributors.</p>
-      <div class="tech">
-        <span>Excel</span><span>Data Analysis</span>
-      </div>
-      <a href="https://github.com/Shalinigowd/blinkit-excel-dashboard" class="btn" target="_blank">🔗 View Project</a>
+      <p>Analyzed outlet performance and identified top revenue contributors using Excel.</p>
+      <p><b>Tech:</b> Excel</p>
+      <a href="https://github.com/Shalinigowd/blinkit-excel-dashboard" target="_blank">View Project →</a>
     </div>
 
-    <div class="project">
-      <img src="student-performance.png">
+    <div class="card">
       <h3>Student Performance Prediction</h3>
-      <p>Machine learning project predicting student performance using Python.</p>
-      <div class="tech">
-        <span>Python</span><span>ML</span>
-      </div>
-      <a href="https://github.com/Shalinigowd/Student_performance_prediction" class="btn" target="_blank">🔗 View Project</a>
+      <p>ML model predicting student results using data preprocessing and feature engineering.</p>
+      <p><b>Tech:</b> Python, ML</p>
+      <a href="https://github.com/Shalinigowd/Student_performance_prediction" target="_blank">View Project →</a>
     </div>
 
-    <div class="project">
-      <img src="sms-filter.png">
+    <div class="card">
       <h3>SMS Spam Filter</h3>
-      <p>Python project implementing SMS spam detection using ML algorithms.</p>
-      <div class="tech">
-        <span>Python</span><span>ML</span>
-      </div>
-      <a href="https://github.com/Shalinigowd/sms-spam-filter" class="btn" target="_blank">🔗 View Project</a>
+      <p>Built NLP model to classify spam messages with high accuracy.</p>
+      <p><b>Tech:</b> Python, NLP</p>
+      <a href="https://github.com/Shalinigowd/sms-spam-filter" target="_blank">View Project →</a>
+    </div>
+
+    <!-- NEW SQL PROJECT -->
+    <div class="card">
+      <h3>SQL Data Analysis Project</h3>
+      <p>Performed advanced SQL queries (joins, aggregations, subqueries) to extract insights from business datasets.</p>
+      <p><b>Tech:</b> SQL</p>
+      <a href="https://github.com/Shalinigowd/sql_project" target="_blank">View Project →</a>
     </div>
 
   </div>
 </section>
-<section class="fade">
+
+<section>
   <h2>Skills</h2>
   <div class="skills">
-    <span>Power BI</span>
-    <span>Excel</span>
     <span>SQL</span>
     <span>Python</span>
-    <span>Data Visualization</span>
+    <span>Power BI</span>
+    <span>Excel</span>
     <span>Machine Learning</span>
+    <span>Data Visualization</span>
+    <span>Data Cleaning</span>
   </div>
 </section>
 
-<section class="fade">
-  <h2>Certifications</h2>
-  <div class="projects">
-
-    <div class="project">
-      <h3>Data Analytics Job Simulation</h3>
-      <p>Deloitte – Forage</p>
-      <a href="certifications/data-analytics-deloitte.pdf" class="btn" target="_blank">📄 View Certificate</a>
-    </div>
-
-    <div class="project">
-      <h3>Data Visualization: Empowering Business with Insights</h3>
-      <p>Forage</p>
-      <a href="certifications/data-visualization-forage.pdf" class="btn" target="_blank">📄 View Certificate</a>
-    </div>
-
-    <div class="project">
-      <h3>GenAI Powered Data Analytics Job Simulation</h3>
-      <p>Forage</p>
-      <a href="certifications/genai-data-analytics.pdf" class="btn" target="_blank">📄 View Certificate</a>
-    </div>
-
-    <div class="project">
-      <h3>TCS iON Career Edge – Young Professional</h3>
-      <p>TCS iON</p>
-      <a href="certifications/tcs-ion-career-edge.pdf" class="btn" target="_blank">📄 View Certificate</a>
-    </div>
-
-    <div class="project">
-      <h3>Power BI Workshop on Office Master</h3>
-      <p>Certified dashboards, visual storytelling, and enhanced report efficiency</p>
-      <a href="certifications/powerbi-workshop.pdf" class="btn" target="_blank">📄 View Certificate</a>
-    </div>
-
-    <div class="project">
-      <h3>Introduction to Data for Decision Makers Job Simulation</h3>
-      <p>Forage</p>
-      <a href="certifications/data-for-decision-makers.pdf" class="btn" target="_blank">📄 View Certificate</a>
-    </div>
-
+<section>
+  <h2>GitHub Stats</h2>
+  <div class="card">
+    <img src="https://github-readme-stats.vercel.app/api?username=Shalinigowd&show_icons=true&theme=dark" width="100%">
   </div>
 </section>
 
-<section class="fade">
+<section>
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:shalinigowda004@gmail.com">shalinigowda004@gmail.com</a></p>
-  <p>
-    <a href="https://github.com/Shalinigowd" target="_blank">GitHub</a> |
-    <a href="https://www.linkedin.com/in/shalinim08/" target="_blank">LinkedIn</a>
-  </p>
+  <div class="card">
+    <p>Email: shalinigowda004@gmail.com</p>
+    <p>
+      <a href="https://github.com/Shalinigowd">GitHub</a> |
+      <a href="https://www.linkedin.com/in/shalinim08/">LinkedIn</a>
+    </p>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Shalini Portfolio</p>
+  <p>© 2026 Shalini | Data Analyst Portfolio</p>
 </footer>
-
-<!-- TYPING SCRIPT -->
-<script>
-const text = "Hi, I'm Shalini 👋";
-let i = 0;
-function typeEffect() {
-  if (i < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeEffect, 100);
-  }
-}
-typeEffect();
-</script>
 
 </body>
 </html>
