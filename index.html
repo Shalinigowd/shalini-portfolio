@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shalini | Data Analyst</title>
 
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
 body {
@@ -13,6 +17,18 @@ body {
   margin: 0;
   background: linear-gradient(135deg, #0f172a, #020617);
   color: #e2e8f0;
+  transition: 0.3s;
+}
+
+/* LIGHT MODE */
+.light-mode {
+  background: #f8fafc;
+  color: #020617;
+}
+
+.light-mode .card {
+  background: #ffffff;
+  color: #020617;
 }
 
 /* HEADER */
@@ -29,6 +45,7 @@ header h1 {
   color: #22c55e;
 }
 
+/* BUTTON */
 .btn {
   display: inline-block;
   margin: 10px;
@@ -39,6 +56,8 @@ header h1 {
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -46,7 +65,7 @@ header h1 {
   transform: scale(1.05);
 }
 
-/* GLASS CARD */
+/* CARD */
 .card {
   background: rgba(30, 41, 59, 0.6);
   backdrop-filter: blur(10px);
@@ -79,6 +98,12 @@ h2 {
   gap: 20px;
 }
 
+.projects img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
 /* SKILLS */
 .skills span {
   display: inline-block;
@@ -100,63 +125,70 @@ footer {
 
 <body>
 
-<header>
+<header data-aos="fade-down">
   <h1>Hi, I'm <span class="highlight">Shalini 👋</span></h1>
   <p>Data Analyst | SQL | Python | Power BI</p>
 
   <a href="shalini_resume_data-analyst.pdf" class="btn" download>Download Resume</a>
   <a href="mailto:shalinigowda004@gmail.com" class="btn">Hire Me</a>
+  <button onclick="toggleMode()" class="btn">🌗 Toggle Mode</button>
 </header>
 
-<section>
+<section data-aos="fade-up">
   <h2>About Me</h2>
   <div class="card">
     <p>
-      I am a results-driven Data Analyst skilled in SQL, Python, Excel, and Power BI. 
-      I specialize in converting raw data into actionable insights that drive business decisions.
+      I am a results-driven Data Analyst skilled in SQL, Python, Excel, and Power BI.
+      I specialize in transforming raw data into actionable insights that drive business decisions.
 
-      I have worked on real-world projects like customer behavior analysis, sales dashboards, and machine learning models. 
-      My goal is to solve business problems using data and contribute to impactful decision-making.
+      I have hands-on experience in building dashboards, analyzing customer behavior,
+      and developing machine learning models to solve real-world problems.
+
+      I am actively seeking opportunities to contribute to data-driven organizations.
     </p>
   </div>
 </section>
 
-<section>
+<section data-aos="fade-up">
   <h2>Projects</h2>
   <div class="projects">
 
-    <div class="card">
+    <div class="card" data-aos="zoom-in">
+      <img src="images/customer-dashboard.png">
       <h3>Customer Behavior Dashboard</h3>
-      <p>Built Power BI dashboard to analyze customer trends and improve targeting strategies.</p>
+      <p>Analyzed customer trends and improved targeting strategies using Power BI.</p>
       <p><b>Tech:</b> Power BI, SQL</p>
       <a href="https://github.com/Shalinigowd/customer-behavior-dashboard" target="_blank">View Project →</a>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="zoom-in">
+      <img src="images/blinkit-dashboard.png">
       <h3>Blinkit Sales Dashboard</h3>
-      <p>Analyzed outlet performance and identified top revenue contributors using Excel.</p>
+      <p>Identified top revenue contributors and outlet performance using Excel.</p>
       <p><b>Tech:</b> Excel</p>
       <a href="https://github.com/Shalinigowd/blinkit-excel-dashboard" target="_blank">View Project →</a>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="zoom-in">
+      <img src="images/student-performance.png">
       <h3>Student Performance Prediction</h3>
-      <p>ML model predicting student results using data preprocessing and feature engineering.</p>
+      <p>ML model predicting student performance using Python.</p>
       <p><b>Tech:</b> Python, ML</p>
       <a href="https://github.com/Shalinigowd/Student_performance_prediction" target="_blank">View Project →</a>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="zoom-in">
+      <img src="images/sms-filter.png">
       <h3>SMS Spam Filter</h3>
-      <p>Built NLP model to classify spam messages with high accuracy.</p>
+      <p>Built NLP-based spam detection system using machine learning.</p>
       <p><b>Tech:</b> Python, NLP</p>
       <a href="https://github.com/Shalinigowd/sms-spam-filter" target="_blank">View Project →</a>
     </div>
 
-    <!-- NEW SQL PROJECT -->
-    <div class="card">
+    <div class="card" data-aos="zoom-in">
+      <img src="images/sql-project.png">
       <h3>SQL Data Analysis Project</h3>
-      <p>Performed advanced SQL queries (joins, aggregations, subqueries) to extract insights from business datasets.</p>
+      <p>Performed joins, aggregations, and business insights using SQL.</p>
       <p><b>Tech:</b> SQL</p>
       <a href="https://github.com/Shalinigowd/sql_project" target="_blank">View Project →</a>
     </div>
@@ -164,7 +196,7 @@ footer {
   </div>
 </section>
 
-<section>
+<section data-aos="fade-up">
   <h2>Skills</h2>
   <div class="skills">
     <span>SQL</span>
@@ -177,20 +209,20 @@ footer {
   </div>
 </section>
 
-<section>
+<section data-aos="fade-up">
   <h2>GitHub Stats</h2>
   <div class="card">
     <img src="https://github-readme-stats.vercel.app/api?username=Shalinigowd&show_icons=true&theme=dark" width="100%">
   </div>
 </section>
 
-<section>
+<section data-aos="fade-up">
   <h2>Contact</h2>
   <div class="card">
     <p>Email: shalinigowda004@gmail.com</p>
     <p>
-      <a href="https://github.com/Shalinigowd">GitHub</a> |
-      <a href="https://www.linkedin.com/in/shalinim08/">LinkedIn</a>
+      <a href="https://github.com/Shalinigowd" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/shalinim08/" target="_blank">LinkedIn</a>
     </p>
   </div>
 </section>
@@ -198,6 +230,20 @@ footer {
 <footer>
   <p>© 2026 Shalini | Data Analyst Portfolio</p>
 </footer>
+
+<!-- AOS SCRIPT -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+
+/* DARK MODE */
+function toggleMode() {
+  document.body.classList.toggle("light-mode");
+}
+</script>
 
 </body>
 </html>
