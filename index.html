@@ -2,7 +2,274 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shalini | Data Analyst</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #0b1120;
+  color: #e5e7eb;
+}
+
+/* NAVBAR */
+nav {
+  position: sticky;
+  top: 0;
+  background: #020617;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #1e293b;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #cbd5f5;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #60a5fa;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #f8fafc;
+}
+
+#typing {
+  color: #60a5fa;
+  font-weight: 500;
+}
+
+/* BUTTON */
+.btn {
+  padding: 10px 18px;
+  margin: 8px;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+/* CARD */
+.card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+.card:hover {
+  border-color: #2563eb;
+  transform: translateY(-4px);
+}
+
+/* SECTION */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+h2 {
+  border-left: 4px solid #2563eb;
+  padding-left: 10px;
+}
+
+/* PROJECT GRID */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.projects img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* FILTER */
+.filter-btn {
+  margin: 5px;
+  padding: 7px 14px;
+  border: 1px solid #2563eb;
+  background: transparent;
+  color: #60a5fa;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <h1>Hi, I'm Shalini 👋</h1>
+  <p id="typing"></p>
+
+  <a href="shalini_resume_data-analyst.pdf" class="btn">Download Resume</a>
+  <a href="mailto:shalinigowda004@gmail.com" class="btn">Hire Me</a>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      Results-driven Data Analyst skilled in SQL, Python, Excel, and Power BI.
+      Experienced in transforming data into actionable insights and building dashboards.
+    </p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <button class="filter-btn" onclick="filterProject('all')">All</button>
+  <button class="filter-btn" onclick="filterProject('sql')">SQL</button>
+  <button class="filter-btn" onclick="filterProject('ml')">ML</button>
+  <button class="filter-btn" onclick="filterProject('bi')">BI</button>
+
+  <div class="projects">
+
+    <div class="card bi">
+      <img src="images/customer-dashboard.png">
+      <h3>Customer Dashboard</h3>
+      <a href="https://github.com/Shalinigowd/customer-behavior-dashboard">View →</a>
+    </div>
+
+    <div class="card bi">
+      <img src="images/blinkit-dashboard.png">
+      <h3>Blinkit Dashboard</h3>
+      <a href="https://github.com/Shalinigowd/blinkit-excel-dashboard">View →</a>
+    </div>
+
+    <div class="card ml">
+      <img src="images/student-performance.png">
+      <h3>Student Prediction</h3>
+      <a href="https://github.com/Shalinigowd/Student_performance_prediction">View →</a>
+    </div>
+
+    <div class="card ml">
+      <img src="images/sms-filter.png">
+      <h3>Spam Filter</h3>
+      <a href="https://github.com/Shalinigowd/sms-spam-filter">View →</a>
+    </div>
+
+    <div class="card sql">
+      <img src="images/sql-project.png">
+      <h3>SQL Project</h3>
+      <a href="https://github.com/Shalinigowd/sql_project">View →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card">
+    SQL | Python | Power BI | Excel | Machine Learning
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: shalinigowda004@gmail.com</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Shalini Portfolio</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+/* TYPING EFFECT */
+const roles = ["Data Analyst", "SQL Developer", "ML Enthusiast"];
+let i=0,j=0,current="",isDeleting=false;
+
+function type(){
+  if(i<roles.length){
+    if(!isDeleting && j<=roles[i].length){
+      current=roles[i].substring(0,j++);
+    } else if(isDeleting && j>=0){
+      current=roles[i].substring(0,j--);
+    }
+
+    document.getElementById("typing").innerHTML=current;
+
+    if(j==roles[i].length) isDeleting=true;
+    if(j==0){ isDeleting=false; i++; if(i==roles.length) i=0; }
+
+    setTimeout(type,100);
+  }
+}
+type();
+
+/* FILTER */
+function filterProject(category){
+  let items=document.querySelectorAll(".projects .card");
+  items.forEach(el=>{
+    if(category=="all" || el.classList.contains(category)){
+      el.classList.remove("hide");
+    } else {
+      el.classList.add("hide");
+    }
+  });
+}
+</script>
+
+</body>
+</html>
 <title>Shalini | Data Analyst</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
