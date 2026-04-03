@@ -45,13 +45,11 @@ header {
 
 header h1 {
   font-size: 2.8rem;
-  color: #0f172a;
 }
 
 #typing {
   color: #2563eb;
   font-weight: 500;
-  margin-top: 10px;
 }
 
 /* BUTTON */
@@ -60,9 +58,8 @@ header h1 {
   margin: 8px;
   border-radius: 6px;
   background: #2563eb;
-  color: #ffffff;
+  color: white;
   text-decoration: none;
-  display: inline-block;
 }
 
 .btn:hover {
@@ -79,15 +76,15 @@ section {
 h2 {
   border-left: 4px solid #2563eb;
   padding-left: 10px;
-  margin-bottom: 20px;
 }
 
 /* CARD */
 .card {
-  background: #ffffff;
+  background: white;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 20px;
+  margin-bottom: 15px;
   transition: 0.3s;
 }
 
@@ -106,9 +103,14 @@ h2 {
   width: 100%;
   border-radius: 6px;
   margin-bottom: 10px;
+  transition: 0.3s;
 }
 
-/* FILTER BUTTON */
+.projects img:hover {
+  transform: scale(1.05);
+}
+
+/* FILTER */
 .filter-btn {
   margin: 5px;
   padding: 6px 14px;
@@ -142,16 +144,15 @@ footer {
 <!-- NAVBAR -->
 <nav>
   <a href="#about">About</a>
+  <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
   <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
 </nav>
 
 <!-- HEADER -->
 <header>
   <h1>Hi, I'm Shalini 👋</h1>
   <p id="typing"></p>
-
   <a href="shalini_resume_data-analyst.pdf" class="btn">Download Resume</a>
   <a href="mailto:shalinigowda004@gmail.com" class="btn">Hire Me</a>
 </header>
@@ -161,9 +162,23 @@ footer {
   <h2>About Me</h2>
   <div class="card">
     <p>
-      Results-driven Data Analyst skilled in SQL, Python, Excel, and Power BI.
-      Experienced in transforming data into actionable insights, building dashboards,
-      and solving real-world business problems.
+      Data Analyst with hands-on experience working with real-world datasets.
+      Skilled in SQL, Python, Excel, and Power BI to generate actionable insights
+      and support business decision-making.
+    </p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+    <h3>Data Science Workshop Participant</h3>
+    <p><b>GitHub:</b> <a href="https://github.com/Shalinigowd/Workshop" target="_blank">View Work</a></p>
+    <p>
+      • Worked with Python (Pandas, NumPy)<br>
+      • Performed data preprocessing & visualization<br>
+      • Built basic machine learning models using real-world datasets
     </p>
   </div>
 </section>
@@ -180,33 +195,38 @@ footer {
   <div class="projects">
 
     <div class="card bi">
-      <img src="images/customer-dashboard.png">
+      <img src="https://raw.githubusercontent.com/Shalinigowd/customer-behavior-dashboard/main/Screenshot%202026-03-20%20134556.png">
       <h3>Customer Behavior Dashboard</h3>
-      <a href="https://github.com/Shalinigowd/customer-behavior-dashboard">View →</a>
+      <p>Analyzed 10,000+ records using Power BI to identify trends and improve decision-making.</p>
+      <a href="https://github.com/Shalinigowd/customer-behavior-dashboard" target="_blank">View →</a>
     </div>
 
     <div class="card bi">
-      <img src="images/blinkit-dashboard.png">
+      <img src="https://raw.githubusercontent.com/Shalinigowd/blinkit-excel-dashboard/main/Screenshot%202026-03-20%20131801.png">
       <h3>Blinkit Sales Dashboard</h3>
-      <a href="https://github.com/Shalinigowd/blinkit-excel-dashboard">View →</a>
+      <p>Built Excel dashboard analyzing sales, outlet performance, and revenue insights.</p>
+      <a href="https://github.com/Shalinigowd/blinkit-excel-dashboard" target="_blank">View →</a>
     </div>
 
     <div class="card ml">
       <img src="images/student-performance.png">
       <h3>Student Performance Prediction</h3>
-      <a href="https://github.com/Shalinigowd/Student_performance_prediction">View →</a>
+      <p>Built ML model with 85% accuracy using Python.</p>
+      <a href="https://github.com/Shalinigowd/Student_performance_prediction" target="_blank">View →</a>
     </div>
 
     <div class="card ml">
       <img src="images/sms-filter.png">
       <h3>SMS Spam Filter</h3>
-      <a href="https://github.com/Shalinigowd/sms-spam-filter">View →</a>
+      <p>Developed NLP-based spam detection system.</p>
+      <a href="https://github.com/Shalinigowd/sms-spam-filter" target="_blank">View →</a>
     </div>
 
     <div class="card sql">
       <img src="images/sql-project.png">
       <h3>SQL Data Analysis Project</h3>
-      <a href="https://github.com/Shalinigowd/sql_project">View →</a>
+      <p>Performed joins, aggregations, and queries to extract business insights.</p>
+      <a href="https://github.com/Shalinigowd/sql_project" target="_blank">View →</a>
     </div>
 
   </div>
@@ -220,19 +240,10 @@ footer {
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    <p>Email: shalinigowda004@gmail.com</p>
-  </div>
-</section>
-
 <footer>
   <p>© 2026 Shalini Portfolio</p>
 </footer>
 
-<!-- SCRIPT -->
 <script>
 const roles = ["Data Analyst", "SQL Developer", "ML Enthusiast"];
 let i=0,j=0,current="",isDeleting=false;
